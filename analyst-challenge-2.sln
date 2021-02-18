@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "analyst-challenge-2", "analyst-challenge-2\analyst-challenge-2.csproj", "{752B6CBB-9581-4BE7-92BA-072B9488691D}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{91B4A723-EE98-4D03-BA72-11B4B313EF90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{752B6CBB-9581-4BE7-92BA-072B9488691D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{752B6CBB-9581-4BE7-92BA-072B9488691D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{752B6CBB-9581-4BE7-92BA-072B9488691D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{752B6CBB-9581-4BE7-92BA-072B9488691D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91B4A723-EE98-4D03-BA72-11B4B313EF90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91B4A723-EE98-4D03-BA72-11B4B313EF90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91B4A723-EE98-4D03-BA72-11B4B313EF90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91B4A723-EE98-4D03-BA72-11B4B313EF90}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9E4C96F4-1219-4790-B181-A84039426E15}
+	EndGlobalSection
+EndGlobal

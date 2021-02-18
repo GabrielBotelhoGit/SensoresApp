@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  analyst-challenge-2:
+    image: ${DOCKER_REGISTRY-}analystchallenge2
+    build:
+      context: .
+      dockerfile: analyst-challenge-2\Dockerfile

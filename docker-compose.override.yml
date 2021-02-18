@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  analyst-challenge-2:
+    image: ${DOCKER_REGISTRY-}sensoresapp
+    build:
+      context: .
+      dockerfile: analyst-challenge-2/Dockerfile
+    ports:      
+      - '8090:80'    
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:            
+      MYSQL_USER: 'root'            
+      MYSQL_ROOT_PASSWORD: 'my-secret-pw'
+    ports:      
+      - '33061:3306'
+    expose:      
+      - '3306'      
+    volumes:
+      - my-db:/var/lib/mysql
+# Names our volume
+volumes:
+  sensoresapp:
+  my-db:

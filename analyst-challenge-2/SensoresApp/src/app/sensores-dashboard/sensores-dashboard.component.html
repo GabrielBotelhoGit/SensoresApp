@@ -1,0 +1,34 @@
+<h3>
+    Número de incidências por região e sensor:
+</h3>
+<ul *ngFor="let pais of leiturasProcessadas?.pais">
+    <ng-container *ngFor="let regiao of pais?.regiao">
+        <li>
+            {{pais.nome + "." + regiao.nome + " - " + regiao.incidencia}}
+        </li>
+        <ng-container *ngFor="let sensor of regiao?.sensor">
+            <li>
+                {{pais.nome + "." + regiao.nome + "." + sensor.nome + " - " + sensor.incidencia}}
+            </li>
+        </ng-container>
+    </ng-container>    
+</ul>
+
+<br>
+
+<h3>
+    Gráfico de último valor por sensor
+</h3>
+<ngx-charts-bar-vertical
+  [view]="view"  
+  [results]="dadosGrafico"
+  [gradient]="gradient"
+  [xAxis]="showXAxis"
+  [yAxis]="showYAxis"
+  [legend]="showLegend"
+  [showXAxisLabel]="showXAxisLabel"
+  [showYAxisLabel]="showYAxisLabel"
+  [xAxisLabel]="xAxisLabel"
+  [yAxisLabel]="yAxisLabel"
+  >
+</ngx-charts-bar-vertical>
