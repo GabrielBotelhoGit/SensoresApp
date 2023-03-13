@@ -1,9 +1,9 @@
-# Introdução
+# Introduction
 
-## Objetivo
-Criar uma aplicação que forneça ao usuário um overview de leituras de sensores de acordo com a região do país.
+## Goal
+Create an application that provides the user with an overview of sensor readings according to the region of the country.
 
-## Tecnologias
+## Technologies
 
 - .Net Core
 
@@ -15,45 +15,45 @@ Criar uma aplicação que forneça ao usuário um overview de leituras de sensor
 
 - MySql
 
-## Páginas SPA
+## SPA Pages
 
-- Home
+-Home
     - Endpoint: localhost:8090/
-    - Descrição: Somente uma landing page de apresentação ao software
-- Tabela Leituras
-    - Endpoint: localhost:8090/Leituras
-    - Descrição: Uma tabela atualizada automaticamente que exibe todas as leituras de todos os sensores.
+    - Description: Only a landing page introducing the software
+- Readings Table
+    - Endpoint: localhost:8090/Readings
+    - Description: An automatically updated table that displays all readings from all sensors.
 - Dashboard
     - Endpoint: localhost:8090/Dashboard
-    - Descrição: Aqui nós temos um componente de lista não ordenada que exibe um totalizador de leituras por região e também por sensor. Além disso temos um gráfico que exibe a última leitura registrada de cada sensor.
+    - Description: Here we have an unordered list component that displays a totalizer of readings by region as well as by sensor. In addition, we have a graph that displays the last recorded reading of each sensor.
 
-## Rotas API
+## Routes API
 
-- Leitura
-    - Endpoint: localhost:8090/Api/Leitura
-        - Metodos: 
-            - Get: Não recebe nenhum parâmetro e retorna a lista de leituras registradas no sistema.
-            - Post: Recebe uma instância de LeituraDto e faz a inserção de uma nova leitura no banco com base nos dados informados
+- Reading
+    - Endpoint: localhost:8090/Api/Read
+        - Methods:
+            - Get: Does not receive any parameters and returns the list of readings registered in the system.
+            - Post: Receives an instance of ReadingDto and inserts a new reading in the database based on the data entered
                 - Body: `{
                     "timeStamp": 59874269871,
                     "tag": 'brasil.sudeste.sensor01',
-                    "valor": '300'
+                    "value": '300'
                 }`
-    - Endpoint: localhost:8090/Api/Leitura
-        - Metodos:
-            - Get: Não recebe nenhum parâmetro e retorna uma lista do último lançamento de cada sensor que não estiver com status de Erro, para montagem do gráfico
+    - Endpoint: localhost:8090/Api/Read
+        - Methods:
+            - Get: It does not receive any parameters and returns a list of the last launch of each sensor that is not in Error status, for graph assembly
 
-# Como instalar:
-## Requisitos:
+# How to install:
+## Requirements:
 
 - Windows/Linux
 - Docker
 
-## Passo a Passo
+## Step by step
 
 
-1. Abrir um programa de linha de comando ex:PowerShell
-2. Navegar até o diretório onde foi inserido o download do projeto
-3. Rodar o comando `docker-compose up --build`
-4. Após o término da execução do comando, basta abrir um navegador de sua escolha e entrar na URL: `http://localhost:8090`
-5. Bom proveito!
+1. Open a command line program ex:PowerShell
+2. Navigate to the directory where the project download was inserted
+3. Run the command `docker-compose up --build`
+4. After the command is finished running, just open a browser of your choice and enter the URL: `http://localhost:8090`
+5. Enjoy!
